@@ -1,0 +1,142 @@
+.resume-poster {
+    height: 100%;
+    padding: 40px 60px;
+    overflow-y: auto;
+    background-image:
+        linear-gradient(var(--color-gray-100) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-gray-100) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.poster-header {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.giant-name {
+    font-size: 8rem;
+    line-height: 0.85;
+    color: var(--color-pitch-black);
+    text-transform: uppercase;
+    margin-left: -10px;
+    mix-blend-mode: multiply;
+}
+
+.role-tag {
+    background: var(--color-electric-blue);
+    color: var(--color-stark-white);
+    padding: 5px 20px;
+    font-family: var(--font-body);
+    font-weight: bold;
+    display: inline-block;
+    transform: rotate(-2deg) translateY(-20px);
+    font-size: 1.2rem;
+}
+
+.poster-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.grid-section h2,
+.grid-section h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: var(--color-pitch-black);
+    color: var(--color-stark-white);
+    display: inline-block;
+    padding: 0 10px;
+    transform: skewX(-10deg);
+}
+
+.manifesto-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    margin-bottom: 40px;
+    border-left: 5px solid var(--color-electric-blue);
+    padding-left: 20px;
+}
+
+.cta-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-headline);
+    font-size: 2rem;
+    color: var(--color-electric-blue);
+    text-decoration: none;
+    border: 2px solid var(--color-electric-blue);
+    padding: 10px 30px;
+    transition: all 0.2s;
+}
+
+.cta-download:hover {
+    background: var(--color-electric-blue);
+    color: var(--color-stark-white);
+}
+
+.brutalist-list {
+    list-style: none;
+}
+
+.brutalist-list li {
+    border-bottom: 2px solid var(--color-pitch-black);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+}
+
+.place {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.detail {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.skills-ticker {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
+.sticker-decal {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 10rem;
+    color: var(--color-electric-blue);
+    opacity: 0.2;
+    pointer-events: none;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .poster-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .giant-name {
+        font-size: 4rem;
+    }
+}

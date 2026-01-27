@@ -1,0 +1,95 @@
+.zine-container {
+    width: 95vw;
+    height: 92vh;
+    background-color: var(--color-stark-white);
+    border: var(--border-thick);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 15px 15px 0px var(--color-pitch-black);
+}
+
+.zine-header {
+    height: 80px;
+    border-bottom: var(--border-thick);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: var(--color-stark-white);
+    z-index: 10;
+}
+
+.brand-mark {
+    font-family: var(--font-headline);
+    font-size: 2.5rem;
+    color: var(--color-electric-blue);
+    letter-spacing: -1px;
+    transform: skewX(-5deg);
+}
+
+.zine-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-pitch-black);
+    position: relative;
+    padding: 0 5px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    font-style: italic;
+    color: var(--color-electric-blue);
+}
+
+.nav-link.active {
+    background: var(--color-electric-blue);
+    color: var(--color-stark-white);
+    transform: rotate(-2deg);
+    padding: 0 10px;
+}
+
+.zine-content {
+    flex: 1;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.deco-bar-left {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    bottom: 0;
+    width: 10px;
+    background: repeating-linear-gradient(45deg,
+            var(--color-electric-blue),
+            var(--color-electric-blue) 10px,
+            var(--color-pitch-black) 10px,
+            var(--color-pitch-black) 20px);
+    border-right: var(--border-thick);
+    z-index: 20;
+}
+
+.deco-bar-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: var(--color-pitch-black);
+    color: var(--color-stark-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
