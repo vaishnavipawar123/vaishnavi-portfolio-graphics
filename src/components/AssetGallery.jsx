@@ -10,145 +10,72 @@ const ASSET_TREE = {
     type: 'root',
     children: [
         {
-            id: 'internships',
-            name: 'INTERNSHIP WORK',
-            type: 'category',
+            id: 'fommec-intern',
+            name: 'FOMMEC',
+            type: 'folder',
+            thumbnail: '/assets/fommec_intern/1 (2).png',
             children: [
+                { type: 'image', src: '/assets/fommec_intern/1 (2).png', label: 'FOMMEC_01' },
+                { type: 'image', src: '/assets/fommec_intern/2 (2).png', label: 'FOMMEC_02' },
+                { type: 'image', src: '/assets/fommec_intern/3 (2).png', label: 'FOMMEC_03' },
                 {
-                    id: 'dc-studios',
-                    name: 'DC STUDIOS',
+                    id: 'fommec-designs',
+                    name: 'DESIGNS',
                     type: 'folder',
-                    thumbnail: '/assets/DC studios_intern/root1.png',
-                    children: [
-                        { type: 'image', src: '/assets/DC studios_intern/root1.png', label: 'ROOT_01' },
-                        { type: 'image', src: '/assets/DC studios_intern/root2.png', label: 'ROOT_02' },
-                        { type: 'image', src: '/assets/DC studios_intern/root3.png', label: 'ROOT_03' },
-                        { type: 'image', src: '/assets/DC studios_intern/root4.png', label: 'ROOT_04' },
-                        { type: 'pdf', src: '/assets/DC studios_intern/ROOTX_portfolio.pdf', label: 'FULL_DOSSIER.PDF' }
-                    ]
-                },
-                {
-                    id: 'fommec',
-                    name: 'FOMMEC',
-                    type: 'folder',
-                    thumbnail: '/assets/fommec_intern/1 (2).png',
-                    children: [
-                        { type: 'image', src: '/assets/fommec_intern/1 (2).png' },
-                        { type: 'image', src: '/assets/fommec_intern/2 (2).png' },
-                        { type: 'image', src: '/assets/fommec_intern/5.png' }
-                    ]
-                },
-                {
-                    id: 'rajrani',
-                    name: 'RAJRANI FND.',
-                    type: 'folder',
-                    thumbnail: '/assets/instagram posts/previous intership posts/RAJRANI FOUNDATION_intern/1.png',
-                    children: [
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/RAJRANI FOUNDATION_intern/1.png' },
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/RAJRANI FOUNDATION_intern/2.png' },
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/RAJRANI FOUNDATION_intern/3.png' }
-                    ]
-                },
-                {
-                    id: 'loveachelois',
-                    name: 'LOVE ACHELOIS',
-                    type: 'folder',
-                    thumbnail: '/assets/instagram posts/previous intership posts/loveachelois_intern/1.png',
-                    children: [
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/loveachelois_intern/1.png' },
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/loveachelois_intern/2.png' }
-                    ]
-                },
-                {
-                    id: 'chattergals',
-                    name: 'CHATTERGALS',
-                    type: 'folder',
-                    thumbnail: '/assets/chattergals_thumb.jpg', // Custom placeholder
-                    children: [
-                        {
-                            id: 'cg-holidays',
-                            name: 'HOLIDAYS',
-                            type: 'folder',
-                            thumbnail: '/assets/instagram posts/previous intership posts/chattergals_intern/holidays/1.png',
-                            children: [
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/holidays/1.png' },
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/holidays/2.png' },
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/holidays/3.png' }
-                            ]
-                        },
-                        {
-                            id: 'cg-love',
-                            name: 'LOVE YOURSELF',
-                            type: 'folder',
-                            thumbnail: '/assets/instagram posts/previous intership posts/chattergals_intern/love yourself and let the change happen/1.png',
-                            children: [
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/love yourself and let the change happen/1.png' },
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/love yourself and let the change happen/2.png' }
-                            ]
-                        },
-                        {
-                            id: 'cg-worry',
-                            name: 'DONT WORRY',
-                            type: 'folder',
-                            thumbnail: '/assets/instagram posts/previous intership posts/chattergals_intern/● Don_t worry you pretty little mind, people throw rocks at things that shine/1.png',
-                            children: [
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/● Don_t worry you pretty little mind, people throw rocks at things that shine/1.png' },
-                                { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/● Don_t worry you pretty little mind, people throw rocks at things that shine/2.png' }
-                            ]
-                        },
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/1.png', label: 'Main Content 1' },
-                        { type: 'image', src: '/assets/instagram posts/previous intership posts/chattergals_intern/2.png', label: 'Main Content 2' }
-                    ]
+                    children: []
                 }
             ]
         },
         {
-            id: 'social',
-            name: 'SOCIAL MEDIA',
-            type: 'category',
+            id: 'instagram-posts',
+            name: 'INSTAGRAM POSTS',
+            type: 'folder',
+            thumbnail: '/assets/instagram posts/1 (2).png',
             children: [
-                { name: "INSTAGRAM", id: "insta", type: "folder", thumbnail: "/assets/instagram posts/previous intership posts/loveachelois_intern/1.png", children: [] }
+                { type: 'image', src: '/assets/instagram posts/1 (2).png', label: 'POST_01' },
+                { type: 'image', src: '/assets/instagram posts/2 (2).png', label: 'POST_02' },
+                { type: 'image', src: '/assets/instagram posts/3 (2).png', label: 'POST_03' },
+                { type: 'image', src: '/assets/instagram posts/foodfair.png', label: 'FOOD_FAIR' },
+                { type: 'image', src: '/assets/instagram posts/musicfest.png', label: 'MUSIC_FEST' }
             ]
         },
         {
-            id: 'posters',
-            name: 'POSTERS & PRINTS',
-            type: 'category',
+            id: 'logos',
+            name: 'LOGOS',
+            type: 'folder',
+            thumbnail: '/assets/logos/Gemini_Generated_Image_x9gp4jx9gp4jx9gp.png',
             children: [
-                {
-                    id: 'poster-col',
-                    name: "POSTER COLLECTION",
-                    type: "folder",
-                    thumbnail: "/assets/posters/Purple Simple This or That Instagram Post Square.png",
-                    children: [
-                        { type: 'image', src: '/assets/posters/Purple Simple This or That Instagram Post Square.png' }
-                    ]
-                }
+                { type: 'image', src: '/assets/logos/Gemini_Generated_Image_x9gp4jx9gp4jx9gp.png', label: 'LOGO_01' },
+                { type: 'image', src: '/assets/logos/Screenshot 2025-10-06 115411 (1).png', label: 'LOGO_02' }
             ]
         },
         {
-            id: 'motion',
-            name: 'MOTION FX',
-            type: 'category',
+            id: 'mockups',
+            name: 'MOCKUPS',
+            type: 'folder',
+            thumbnail: '/assets/Mockups/1.png',
             children: [
-                {
-                    id: 'anim-shorts',
-                    name: 'SHORT FILMS',
-                    type: 'folder',
-                    children: [
-                        { type: 'video', src: '/assets/short animation_googleclub/eid (2).mp4', label: 'EID_MV' },
-                        { type: 'video', src: '/assets/short animation_googleclub/women_s-day.mp4', label: 'WOMENS_DAY_MV' }
-                    ]
-                },
-                {
-                    id: 'anim-general',
-                    name: 'GENERAL MOTION',
-                    type: 'folder',
-                    children: [
-                        { type: 'video', src: '/assets/animations/graphics.mp4', label: 'GRAPHICS_REEL' },
-                        { type: 'video', src: '/assets/animations/motion.mp4', label: 'MOTION_STUDY' }
-                    ]
-                }
+                { type: 'image', src: '/assets/Mockups/1.png', label: 'MOCKUP_01' },
+                { type: 'image', src: '/assets/Mockups/2.png', label: 'MOCKUP_02' },
+                { type: 'image', src: '/assets/Mockups/3.png', label: 'MOCKUP_03' },
+                { type: 'image', src: '/assets/Mockups/5.png', label: 'MOCKUP_05' },
+                { type: 'image', src: '/assets/Mockups/6.png', label: 'MOCKUP_06' },
+                { type: 'image', src: '/assets/Mockups/7.png', label: 'MOCKUP_07' },
+                { type: 'image', src: '/assets/Mockups/8.png', label: 'MOCKUP_08' },
+                { type: 'image', src: '/assets/Mockups/10.png', label: 'MOCKUP_10' },
+                { type: 'image', src: '/assets/Mockups/13.png', label: 'MOCKUP_13' },
+                { type: 'image', src: '/assets/Mockups/14.png', label: 'MOCKUP_14' }
+            ]
+        },
+        {
+            id: 'posters-promotional',
+            name: 'POSTERS & PROMOTIONAL',
+            type: 'folder',
+            thumbnail: '/assets/posters%20and%20promostional/idxff2.png',
+            children: [
+                { type: 'image', src: '/assets/posters%20and%20promostional/idxff2.png', label: 'POSTER_01' },
+                { type: 'video', src: '/assets/posters%20and%20promostional/Blue%20Modern%20Minimalist%20Fashion%20Coming%20Soon%20Instagram%20Story.mp4', label: 'VIDEO_01' },
+                { type: 'video', src: '/assets/posters%20and%20promostional/White%20and%20Brown%20Modern%20Coming%20Soon%20Instagram%20Story.mp4', label: 'VIDEO_02' }
             ]
         }
     ]

@@ -8,7 +8,8 @@ const ResumeSection = () => {
             <header className="poster-header">
                 <div>
                     <h1 className="giant-name">VAISHNAVI<br />PAWAR</h1>
-                    <span className="role-tag">VISUAL DESIGNER & ARTIST</span>
+                    <span className="role-tag">GRAPHIC DESIGNER</span>
+                    <p className="tagline">"Transforming Ideas Into Visuals"</p>
                 </div>
                 {/* High-Quality Hero Vector */}
                 <img src="/assets/hero-illustration.png" alt="Professional Avatar" className="hero-illustration" />
@@ -24,7 +25,7 @@ const ResumeSection = () => {
                         I push boundaries to deliver impact.
                     </p>
                     <a href="/resume.pdf" target="_blank" className="cta-download">
-                        DOWNLOAD RESUME_V2.0
+                        DOWNLOAD RESUME
                     </a>
                 </section>
 
@@ -33,23 +34,41 @@ const ResumeSection = () => {
                     <ul className="brutalist-list">
                         <li>
                             <span className="place">DC STUDIOS</span>
-                            <span className="detail">2024 - PRESENT</span>
+                            <span className="detail">JULY - SEPT 2025</span>
                         </li>
                         <li>
-                            <span className="place">FOMMEC</span>
-                            <span className="detail">2023 - 2024</span>
+                            <span className="place">HONEST DESIGNS</span>
+                            <span className="detail">APR 2025</span>
                         </li>
                         <li>
-                            <span className="place">RAJRANI FND.</span>
-                            <span className="detail">2023</span>
+                            <span className="place">GOOGLE DEVELOPER CLUB</span>
+                            <span className="detail">2024 - 2025</span>
+                        </li>
+                        <li>
+                            <span className="place">NON PROFIT ORGANIZATIONS</span>
+                            <span className="detail">2021 - 2022</span>
                         </li>
                     </ul>
 
                     <div style={{ marginTop: '50px' }}>
                         <h3>SKILLS</h3>
-                        <div className="skills-ticker">
-                            PHOTOSHOP /// ILLUSTRATOR /// PREMIERE PRO /// FIGMA ///
-                            AFTER EFFECTS /// BLENDER /// GENERATIVE AI
+                        <div className="skills-container">
+                            <div className="skill-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" className="skill-logo" />
+                                <span>PHOTOSHOP</span>
+                            </div>
+                            <div className="skill-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" className="skill-logo" />
+                                <span>FIGMA</span>
+                            </div>
+                            <div className="skill-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender" className="skill-logo" />
+                                <span>BLENDER</span>
+                            </div>
+                            <div className="skill-item">
+                                <img src="/assets/canva-icon.png" alt="Canva" className="skill-logo" />
+                                <span>CANVA</span>
+                            </div>
                         </div>
                     </div>
                 </section>
