@@ -5,83 +5,55 @@ import { motion } from 'framer-motion';
 const ResumeSection = () => {
     return (
         <div className="resume-poster">
-            <motion.div
-                className="poster-header"
-                initial={{ y: -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-            >
-                <h1 className="giant-name">VAISHNAVI<br />PAWAR</h1>
-                <div className="role-tag">GRAPHIC DESIGNER // VISUALIST</div>
-            </motion.div>
+            <header className="poster-header">
+                <div>
+                    <h1 className="giant-name">VAISHNAVI<br />PAWAR</h1>
+                    <span className="role-tag">VISUAL DESIGNER & ARTIST</span>
+                </div>
+                {/* High-Quality Hero Vector */}
+                <img src="/assets/hero-illustration.png" alt="Professional Avatar" className="hero-illustration" />
+            </header>
 
             <div className="poster-grid">
-                <motion.div
-                    className="grid-section left"
-                    initial={{ x: -50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                >
+                <section className="grid-section" data-index="01">
                     <h2>MANIFESTO</h2>
                     <p className="manifesto-text">
-                        Design is not just decoration. It is an act of communication.
-                        I curate visuals that disrupt, engage, and remain etched in memory.
-                        Specializing in high-impact brand identity and social narratives.
+                        I craft digital experiences that blend artistic intuition with strategic design.
+                        My work is not just about aesthetics; it's about creating a visual language
+                        that speaks louder than words. From editorial layouts to motion graphics,
+                        I push boundaries to deliver impact.
                     </p>
-
                     <a href="/resume.pdf" target="_blank" className="cta-download">
-                        GET THE RAW FILE <span className="arrow">↗</span>
+                        DOWNLOAD RESUME_V2.0
                     </a>
-                </motion.div>
+                </section>
 
-                <motion.div
-                    className="grid-section right"
-                    initial={{ x: 50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                >
-                    <div className="stat-block">
-                        <h3>EXPERIENCE</h3>
-                        <ul className="brutalist-list">
-                            <li>
-                                <span className="year">2024</span>
-                                <span className="place">DC STUDIOS</span>
-                                <span className="detail">Intern / Brand Visuals</span>
-                            </li>
-                            <li>
-                                <span className="year">2023</span>
-                                <span className="place">FOMMEC</span>
-                                <span className="detail">Intern / Design Ops</span>
-                            </li>
-                            <li>
-                                <span className="year">2023</span>
-                                <span className="place">RAJRANI FND.</span>
-                                <span className="detail">NGO / Social Media</span>
-                            </li>
-                            <li>
-                                <span className="year">2022</span>
-                                <span className="place">CHATTERGALS</span>
-                                <span className="detail">Intern / Content</span>
-                            </li>
-                            <li>
-                                <span className="year">2022</span>
-                                <span className="place">LOVE ACHELOIS</span>
-                                <span className="detail">Intern / Aesthetics</span>
-                            </li>
-                        </ul>
-                    </div>
+                <section className="grid-section" data-index="02">
+                    <h3>EXPERIENCE</h3>
+                    <ul className="brutalist-list">
+                        <li>
+                            <span className="place">DC STUDIOS</span>
+                            <span className="detail">2024 - PRESENT</span>
+                        </li>
+                        <li>
+                            <span className="place">FOMMEC</span>
+                            <span className="detail">2023 - 2024</span>
+                        </li>
+                        <li>
+                            <span className="place">RAJRANI FND.</span>
+                            <span className="detail">2023</span>
+                        </li>
+                    </ul>
 
-                    <div className="stat-block">
-                        <h3>ARSENAL</h3>
-                        <p className="skills-ticker">
-                            PHOTOSHOP / ILLUSTRATOR / PREMIERE PRO / CANVA / TYPOGRAPHY / BRANDING
-                        </p>
+                    <div style={{ marginTop: '50px' }}>
+                        <h3>SKILLS</h3>
+                        <div className="skills-ticker">
+                            PHOTOSHOP /// ILLUSTRATOR /// PREMIERE PRO /// FIGMA ///
+                            AFTER EFFECTS /// BLENDER /// GENERATIVE AI
+                        </div>
                     </div>
-                </motion.div>
+                </section>
             </div>
-
-            {/* Decals */}
-            <div className="sticker-decal">★</div>
         </div>
     );
 };

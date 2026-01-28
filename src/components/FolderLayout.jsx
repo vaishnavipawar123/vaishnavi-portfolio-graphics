@@ -6,7 +6,7 @@ const FolderLayout = ({ children, activeTab, onTabChange }) => {
     return (
         <div className="zine-container">
             <header className="zine-header">
-                <div className="brand-mark">VP // 2026</div>
+                <div className="brand-mark">VP</div>
                 <nav className="zine-nav">
                     {['resume', 'portfolio'].map((tab) => (
                         <button
@@ -38,9 +38,9 @@ const FolderLayout = ({ children, activeTab, onTabChange }) => {
             {/* Decorative Elements */}
             <div className="deco-bar-left"></div>
             <div className="deco-bar-bottom">
-                <span>© EDITION 01</span>
-                <span>HIGH_FASHION_STREETWEAR</span>
-                <span>MUMBAI</span>
+                <span>© 2026 All rights reserved</span>
+              
+                
             </div>
         </div>
     );

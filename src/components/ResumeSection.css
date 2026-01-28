@@ -1,80 +1,97 @@
 .resume-poster {
     height: 100%;
-    padding: 40px 60px;
+    padding: 30px 40px;
     overflow-y: auto;
+    background-color: var(--color-bg-primary);
     background-image:
-        linear-gradient(var(--color-gray-100) 1px, transparent 1px),
-        linear-gradient(90deg, var(--color-gray-100) 1px, transparent 1px);
-    background-size: 40px 40px;
+        radial-gradient(var(--color-gray-200) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
 .poster-header {
-    margin-bottom: 60px;
-    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--color-text-primary);
+    padding-bottom: 80px;
 }
 
 .giant-name {
-    font-size: 8rem;
-    line-height: 0.85;
-    color: var(--color-pitch-black);
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--color-text-primary);
     text-transform: uppercase;
-    margin-left: -10px;
-    mix-blend-mode: multiply;
+    letter-spacing: -1px;
 }
 
 .role-tag {
-    background: var(--color-electric-blue);
-    color: var(--color-stark-white);
-    padding: 5px 20px;
+    background: var(--color-accent-primary);
+    color: var(--color-bg-primary);
+    padding: 04px 26px;
     font-family: var(--font-body);
-    font-weight: bold;
-    display: inline-block;
-    transform: rotate(-2deg) translateY(-20px);
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .poster-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 100px;
+}
+
+.grid-section {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+/* Watermark Numbers */
+.grid-section::before {
+    content: attr(data-index);
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    font-size: 8rem;
+    font-family: var(--font-headline);
+    font-weight: 900;
+    color: var(--color-gray-100);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .grid-section h2,
 .grid-section h3 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    background: var(--color-pitch-black);
-    color: var(--color-stark-white);
-    display: inline-block;
-    padding: 0 10px;
-    transform: skewX(-10deg);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--color-text-primary);
+    font-weight: 700;
 }
 
 .manifesto-text {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    font-family: var(--font-body);
-    margin-bottom: 40px;
-    border-left: 5px solid var(--color-electric-blue);
-    padding-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    font-weight: 300;
+    max-width: 600px;
 }
 
 .cta-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-headline);
-    font-size: 2rem;
-    color: var(--color-electric-blue);
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
     text-decoration: none;
-    border: 2px solid var(--color-electric-blue);
-    padding: 10px 30px;
-    transition: all 0.2s;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .cta-download:hover {
-    background: var(--color-electric-blue);
-    color: var(--color-stark-white);
+    background: var(--color-text-primary);
+    color: var(--color-bg-primary);
 }
 
 .brutalist-list {
@@ -82,61 +99,56 @@
 }
 
 .brutalist-list li {
-    border-bottom: 2px solid var(--color-pitch-black);
-    padding: 15px 0;
+    border-bottom: 1px solid var(--color-gray-200);
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    font-family: var(--font-headline);
-    font-size: 1.5rem;
+    align-items: center;
 }
 
 .place {
-    flex: 1;
-    margin-left: 20px;
+    font-family: var(--font-headline);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .detail {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--color-text-secondary);
+    color: #666;
 }
 
 .skills-ticker {
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    word-spacing: 5px;
-    line-height: 1.5;
+    font-size: 1rem;
+    color: #666;
+    line-height: 2;
 }
 
-.sticker-decal {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    font-size: 10rem;
-    color: var(--color-electric-blue);
-    opacity: 0.2;
-    pointer-events: none;
-    animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+/* Hero Illustration Container */
+.hero-illustration {
+    width: 500px;
+    opacity: 1;
+    z-index: 10;
+    /* mix-blend-mode removed to hide dots */
+    margin-bottom: -80px;
+    margin-top: -200px;
+    /* Stronger pull up */
+    margin-right: -50px;
+    /* Stronger pull right */
 }
 
 @media (max-width: 900px) {
     .poster-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 50px;
     }
 
     .giant-name {
-        font-size: 4rem;
+        font-size: 3.5rem;
+    }
+
+    .resume-poster {
+        padding: 30px;
     }
 }
