@@ -10,20 +10,21 @@ const ASSET_TREE = {
     type: 'root',
     children: [
         {
-            id: 'fommec-intern',
-            name: 'FOMMEC',
+            id: 'linkedin-post',
+            name: 'LINKEDIN POST',
             type: 'folder',
-            thumbnail: '/assets/fommec_intern/1 (2).png',
+            thumbnail: '/assets/fommec_intern/10.jpg',
             children: [
-                { type: 'image', src: '/assets/fommec_intern/1 (2).png', label: 'FOMMEC_01' },
-                { type: 'image', src: '/assets/fommec_intern/2 (2).png', label: 'FOMMEC_02' },
-                { type: 'image', src: '/assets/fommec_intern/3 (2).png', label: 'FOMMEC_03' },
-                {
-                    id: 'fommec-designs',
-                    name: 'DESIGNS',
-                    type: 'folder',
-                    children: []
-                }
+                { type: 'image', src: '/assets/fommec_intern/10.jpg', label: '10' },
+                { type: 'image', src: '/assets/fommec_intern/facts.jpg', label: 'FACTS' },
+                { type: 'image', src: '/assets/fommec_intern/facts (2).jpg', label: 'FACTS_2' },
+                { type: 'image', src: '/assets/fommec_intern/facts (3).jpg', label: 'FACTS_3' },
+                { type: 'image', src: '/assets/fommec_intern/hiring.jpg', label: 'HIRING' },
+                { type: 'image', src: '/assets/fommec_intern/hiring (2).jpg', label: 'HIRING_2' },
+                { type: 'image', src: '/assets/fommec_intern/service.jpg', label: 'SERVICE' },
+                { type: 'image', src: '/assets/fommec_intern/service (2).jpg', label: 'SERVICE_2' },
+                { type: 'image', src: '/assets/fommec_intern/service (3).jpg', label: 'SERVICE_3' },
+                { type: 'image', src: '/assets/fommec_intern/service (4).jpg', label: 'SERVICE_4' }
             ]
         },
         {
