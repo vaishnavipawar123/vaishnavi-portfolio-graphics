@@ -10,6 +10,7 @@ const ResumeSection = () => {
                     <h1 className="giant-name">VAISHNAVI<br />PAWAR</h1>
                     <span className="role-tag">GRAPHIC DESIGNER</span>
                     <p className="tagline">"Transforming Ideas Into Visuals"</p>
+                    {/* <a href="#contact" className="cta-contact">CONTACT ME</a> */}
                 </div>
                 {/* High-Quality Hero Vector */}
                 <img src="/assets/hero-illustration.png" alt="Professional Avatar" className="hero-illustration" />
@@ -73,6 +74,26 @@ const ResumeSection = () => {
                     </div>
                 </section>
             </div>
+
+            {/*
+            <section id="contact" className="contact-section">
+                <h2>CONTACT</h2>
+                <div className="contact-info">
+                    <div className="contact-item">
+                        <span className="contact-label">EMAIL:</span>
+                        <a href="mailto:vaishnavipawar860@gmail.com" className="contact-link">vaishnavipawar860@gmail.com</a>
+                    </div>
+                    <div className="contact-item">
+                        <span className="contact-label">INSTAGRAM:</span>
+                        <a href="https://www.instagram.com/viis_cameraroll/" target="_blank" className="contact-link">viis_cameraroll</a>
+                    </div>
+                    <div className="contact-item">
+                        <span className="contact-label">LINKEDIN:</span>
+                        <a href="https://www.linkedin.com/in/vaishnavi-pawar-24b636215/" target="_blank" className="contact-link">Vaishnavi Pawar</a>
+                    </div>
+                </div>
+            </section>
+            */}
         </div>
     );
 };

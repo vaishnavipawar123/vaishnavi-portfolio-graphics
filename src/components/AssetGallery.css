@@ -148,6 +148,16 @@
     align-items: start;
 }
 
+.ui-section {
+    grid-template-columns: 1fr;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
 .file-card {
     background: transparent;
     border: none;
