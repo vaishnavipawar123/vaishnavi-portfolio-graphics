@@ -2,6 +2,7 @@ import React from 'react';
 import './ResumeSection.css';
 import { motion } from 'framer-motion';
 
+
 const ResumeSection = () => {
     return (
         <div className="resume-poster">
@@ -14,6 +15,7 @@ const ResumeSection = () => {
                 </div>
                 {/* High-Quality Hero Vector */}
                 <img src="/assets/hero-illustration.png" alt="Professional Avatar" className="hero-illustration" />
+
             </header>
 
             <div className="poster-grid">
@@ -69,6 +71,10 @@ const ResumeSection = () => {
                             <div className="skill-item">
                                 <img src="/assets/canva-icon.png" alt="Canva" className="skill-logo" />
                                 <span>CANVA</span>
+                            </div>
+                            <div className="skill-item">
+                                <img src="/assets/affinity.svg" alt="Affinity" className="skill-logo" />
+                                <span>AFFINITY</span>
                             </div>
                         </div>
                     </div>

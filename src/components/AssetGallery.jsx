@@ -10,21 +10,19 @@ const ASSET_TREE = {
     type: 'root',
     children: [
         {
-            id: 'linkedin-post',
-            name: 'LINKEDIN POST',
+            id: 'magazine-design',
+            name: 'MAGAZINE DESIGN',
             type: 'folder',
-            thumbnail: '/assets/fommec_intern/10.jpg',
+            thumbnail: '/assets/magazine design/cover.png',
             children: [
-                { type: 'image', src: '/assets/fommec_intern/10.jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/facts.jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/facts (2).jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/facts (3).jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/hiring.jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/hiring (2).jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/service.jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/service (2).jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/service (3).jpg', label: '' },
-                { type: 'image', src: '/assets/fommec_intern/service (4).jpg', label: '' }
+                { type: 'image', src: '/assets/magazine design/cover.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/Document2.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/Document3.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/mock.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/mock2.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/mock3.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/mock4.png', label: '' },
+                { type: 'image', src: '/assets/magazine design/mock5.png', label: '' }
             ]
         },
         {
@@ -85,7 +83,7 @@ const ASSET_TREE = {
             type: 'folder',
             thumbnail: '/assets/chattergals_thumb.jpg',
             children: [
-                { type: 'video', src: '/assets/UI/UII.mp4', label: '' }                
+                { type: 'video', src: '/assets/UI/UII.mp4', label: '' }
             ]
         }
     ]
@@ -160,7 +158,6 @@ const AssetGallery = () => {
                                             <div className="folder-tag">{folder.children?.length} ITEMS</div>
                                         </div>
                                         <div className="folder-label">
-                                            <span className="folder-icon">📂</span>
                                             {folder.name}
                                         </div>
                                     </motion.div>
@@ -170,9 +167,9 @@ const AssetGallery = () => {
 
                         {/* Render Files */}
                         {files.length > 0 && (
-                            <div className={`file-masonry ${currentView.id === 'UI' ? 'ui-section' : ''}`}>
+                            <div className={`file-masonry ${currentView.id === 'UI' ? 'ui-section' : ''} ${currentView.id === 'magazine-design' ? 'magazine-section' : ''}`}>
                                 {files.map((file, idx) => (
-                                    <div key={idx} className={`file-card ${file.type === 'video' ? 'video-card' : ''}`}>
+                                    <div key={idx} className={`file-card ${file.type === 'video' ? 'video-card' : ''} ${currentView.id === 'magazine-design' ? 'magazine-card' : ''}`}>
                                         {file.type === 'image' && <img src={file.src} alt={file.label} loading="lazy" />}
                                         {file.type === 'video' && <video src={file.src} controls />}
                                         {file.type === 'pdf' && (
