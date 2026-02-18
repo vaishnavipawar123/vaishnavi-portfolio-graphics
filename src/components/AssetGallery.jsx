@@ -36,6 +36,12 @@ const ASSET_TREE = {
                 { type: 'image', src: '/assets/cards/mock2.png', label: '' },
                 { type: 'image', src: '/assets/cards/mock3.png', label: '' },
                 { type: 'image', src: '/assets/cards/mock4.png', label: '' },
+                { type: 'image', src: '/assets/cards/g1.png', label: '' },
+                { type: 'image', src: '/assets/cards/g2.png', label: '' },
+                { type: 'image', src: '/assets/cards/m1.png', label: '' },
+                { type: 'image', src: '/assets/cards/m2.png', label: '' },
+                { type: 'image', src: '/assets/cards/m3.png', label: '' },
+                { type: 'image', src: '/assets/cards/m4.png', label: '' },
             ]
         },
         {
