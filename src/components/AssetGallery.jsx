@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './AssetGallery.css';
 
 // --- DATA STRUCTURE ---
-// Node Types: 'category', 'folder', 'file'
 const ASSET_TREE = {
     id: 'root',
     name: 'HOME',
@@ -23,6 +22,20 @@ const ASSET_TREE = {
                 { type: 'image', src: '/assets/magazine design/mock3.png', label: '' },
                 { type: 'image', src: '/assets/magazine design/mock4.png', label: '' },
                 { type: 'image', src: '/assets/magazine design/mock5.png', label: '' }
+            ]
+        },
+        {
+            id: 'business-cards',
+            name: 'Business Cards',
+            type: 'folder',
+            thumbnail: '/assets/cards/mock1.png',
+            children: [
+                { type: 'image', src: '/assets/cards/florene_1.png', label: '' },
+                { type: 'image', src: '/assets/cards/florene_3.png', label: '' },
+                { type: 'image', src: '/assets/cards/mock1.png', label: '' },
+                { type: 'image', src: '/assets/cards/mock2.png', label: '' },
+                { type: 'image', src: '/assets/cards/mock3.png', label: '' },
+                { type: 'image', src: '/assets/cards/mock4.png', label: '' },
             ]
         },
         {
@@ -90,10 +103,9 @@ const ASSET_TREE = {
 };
 
 const AssetGallery = () => {
-    // Navigation Path Stack (Array of Nodes)
     const [navPath, setNavPath] = useState([ASSET_TREE]);
+    const [selectedImage, setSelectedImage] = useState(null); // Lightbox State
 
-    // Current View is the last item in the path
     const currentView = navPath[navPath.length - 1];
 
     const handleNavigate = (node) => {
@@ -103,17 +115,14 @@ const AssetGallery = () => {
     };
 
     const handleBreadcrumbClick = (index) => {
-        // Slice path to go back
         setNavPath(navPath.slice(0, index + 1));
     };
 
-    // Separate children into Sub-Folders and Files
     const subFolders = currentView.children?.filter(c => c.type === 'category' || c.type === 'folder') || [];
     const files = currentView.children?.filter(c => c.type === 'image' || c.type === 'video' || c.type === 'pdf') || [];
 
     return (
         <div className="gallery-container">
-            {/* Breadcrumb Navigation */}
             <nav className="breadcrumb-nav">
                 {navPath.map((node, index) => (
                     <React.Fragment key={node.id}>
@@ -138,7 +147,6 @@ const AssetGallery = () => {
                         transition={{ duration: 0.3 }}
                         className="gallery-grid-wrapper"
                     >
-                        {/* Render Sub-Folders / Categories */}
                         {subFolders.length > 0 && (
                             <div className="folder-section">
                                 {subFolders.map(folder => (
@@ -157,23 +165,28 @@ const AssetGallery = () => {
                                             )}
                                             <div className="folder-tag">{folder.children?.length} ITEMS</div>
                                         </div>
-                                        <div className="folder-label">
-                                            {folder.name}
-                                        </div>
+                                        <div className="folder-label">{folder.name}</div>
                                     </motion.div>
                                 ))}
                             </div>
                         )}
 
-                        {/* Render Files */}
                         {files.length > 0 && (
                             <div className={`file-masonry ${currentView.id === 'UI' ? 'ui-section' : ''} ${currentView.id === 'magazine-design' ? 'magazine-section' : ''}`}>
                                 {files.map((file, idx) => (
                                     <div key={idx} className={`file-card ${file.type === 'video' ? 'video-card' : ''} ${currentView.id === 'magazine-design' ? 'magazine-card' : ''}`}>
-                                        {file.type === 'image' && <img src={file.src} alt={file.label} loading="lazy" />}
+                                        {file.type === 'image' && (
+                                            <img 
+                                                src={file.src} 
+                                                alt={file.label} 
+                                                loading="lazy" 
+                                                onClick={() => setSelectedImage(file.src)} 
+                                                style={{ cursor: 'pointer' }} 
+                                            />
+                                        )}
                                         {file.type === 'video' && <video src={file.src} controls />}
                                         {file.type === 'pdf' && (
-                                            <a href={file.src} target="_blank" className="pdf-link">
+                                            <a href={file.src} target="_blank" rel="noreferrer" className="pdf-link">
                                                 PDF_DOC // {file.label}
                                             </a>
                                         )}
@@ -186,10 +199,45 @@ const AssetGallery = () => {
                         {subFolders.length === 0 && files.length === 0 && (
                             <div className="empty-state">NO_DATA_FOUND_IN_SECTOR</div>
                         )}
-
                     </motion.div>
                 </AnimatePresence>
             </div>
+
+            {/* LIGHTBOX OVERLAY */}
+            /* ... rest of the code stays the same ... */
+
+{/* LIGHTBOX OVERLAY */}
+            {/* LIGHTBOX OVERLAY */}
+            {/* LIGHTBOX OVERLAY */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div 
+                        className="lightbox-overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <button className="close-lightbox" onClick={() => setSelectedImage(null)}>✕</button>
+                        
+                        <motion.div 
+                            className="lightbox-image-wrapper"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 30 }}
+                            onClick={(e) => e.stopPropagation()} 
+                        >
+                            <img 
+                                src={selectedImage} 
+                                alt="Expanded view" 
+                                className="lightbox-img"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+/* ... rest of the code stays the same ... */
         </div>
     );
 };
