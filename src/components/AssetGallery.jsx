@@ -44,6 +44,17 @@ const ASSET_TREE = {
                 { type: 'image', src: '/assets/cards/m4.png', label: '' },
             ]
         },
+         {
+            id: 'p-cover',
+            name: 'PODCAST COVER',
+            type: 'folder',
+            thumbnail: '/assets/pcover/pc2.png',
+            children: [
+                { type: 'image', src: '/assets/pcover/pc1.png', label: '' },
+                { type: 'image', src: '/assets/pcover/pc2.png', label: '' }
+                
+            ]
+        },
         {
             id: 'instagram-posts',
             name: 'INSTAGRAM POSTS',
