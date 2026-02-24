@@ -42,9 +42,13 @@ const ASSET_TREE = {
                 { type: 'image', src: '/assets/cards/m2.png', label: '' },
                 { type: 'image', src: '/assets/cards/m3.png', label: '' },
                 { type: 'image', src: '/assets/cards/m4.png', label: '' },
+                { type: 'image', src: '/assets/cards/ya_1.png', label: '' },
+                { type: 'image', src: '/assets/cards/ya_2.png', label: '' },
+                { type: 'image', src: '/assets/cards/yam1.png', label: '' },
+                { type: 'image', src: '/assets/cards/yam2.png', label: '' },
             ]
         },
-         {
+        {
             id: 'p-cover',
             name: 'PODCAST COVER',
             type: 'folder',
