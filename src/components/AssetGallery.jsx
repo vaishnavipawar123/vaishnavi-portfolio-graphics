@@ -49,6 +49,19 @@ const ASSET_TREE = {
             ]
         },
         {
+            id: 'p-identity',
+            name: 'PRODUCT IDENTITY & PACKAGING',
+            type: 'folder',
+            thumbnail: '/assets/product identity/m33.png',
+            children: [
+                { type: 'image', src: '/assets/product identity/m11.png', label: '' },
+                { type: 'image', src: '/assets/product identity/m22.png', label: '' },
+                { type: 'image', src: '/assets/product identity/m33.png', label: '' },
+                { type: 'video', src: '/assets/product identity/m55.mp4', label: '' },
+                
+            ]
+        },
+        {
             id: 'p-cover',
             name: 'PODCAST COVER',
             type: 'folder',
